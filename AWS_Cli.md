@@ -1,4 +1,4 @@
-# AWS CLi
+# AWS Command Line Interface
 
 ## Install AWS Cli
 
@@ -36,7 +36,7 @@ Both of the files are located under the 'bin/' subdirectory of the 'awscli' inst
     * export AWS_SECRET_ACCESS_KEY=<secret_key>
 
 **Security note**: the first choice will create two files under *~/.aws*, called 'config' and 'credentials'. The first one contains just the 
-user choice in terms of output format and AWS region but the second one stores the two access key in **clear text** ASCII file.
+user choice in terms of output format and AWS region but the second one stores the two access keys in a **clear text** ASCII file.
 
 ### References
 
@@ -44,6 +44,37 @@ user choice in terms of output format and AWS region but the second one stores t
 * AWS regions and endpoints: https://docs.aws.amazon.com/general/latest/gr/rande.html
 
 ## Commands
+
+### Display available zones
+
+~~~
+aws ec2 describe-regions --output table
+~~~
+
+~~~
+----------------------------------------------------------
+|                     DescribeRegions                    |
++--------------------------------------------------------+
+||                        Regions                       ||
+|+-----------------------------------+------------------+|
+||             Endpoint              |   RegionName     ||
+|+-----------------------------------+------------------+|
+||  ec2.ap-south-1.amazonaws.com     |  ap-south-1      ||
+||  ec2.eu-west-2.amazonaws.com      |  eu-west-2       ||
+||  ec2.eu-west-1.amazonaws.com      |  eu-west-1       ||
+||  ec2.ap-northeast-2.amazonaws.com |  ap-northeast-2  ||
+||  ec2.ap-northeast-1.amazonaws.com |  ap-northeast-1  ||
+||  ec2.sa-east-1.amazonaws.com      |  sa-east-1       ||
+||  ec2.ca-central-1.amazonaws.com   |  ca-central-1    ||
+||  ec2.ap-southeast-1.amazonaws.com |  ap-southeast-1  ||
+||  ec2.ap-southeast-2.amazonaws.com |  ap-southeast-2  ||
+||  ec2.eu-central-1.amazonaws.com   |  eu-central-1    ||
+||  ec2.us-east-1.amazonaws.com      |  us-east-1       ||
+||  ec2.us-east-2.amazonaws.com      |  us-east-2       ||
+||  ec2.us-west-1.amazonaws.com      |  us-west-1       ||
+||  ec2.us-west-2.amazonaws.com      |  us-west-2       ||
+|+-----------------------------------+------------------+|
+~~~
 
 ### List IAM users
 
@@ -66,6 +97,41 @@ Output in JSON format:
     ]
 }
 ~~~
+
+### List security groups
+
+~~~
+aws ec2 describe-security-groups
+~~~
+
+### Create a security group
+
+~~~
+aws ec2 create-security-group --group-name my_devenv --description "Security Group for EC2 at @work"
+~~~
+
+### Remove a security group
+
+~~~
+aws ec2 delete-security-group --group-name my_devenv
+~~~
+
+### Authorize SSH access to EC2 instances for a specific security group
+
+~~~
+aws ec2 authorize-security-group-ingress --group-name my_devenv --protocol tcp --port 22 --cidr XXX.XXX.XXX.XXX/32
+~~~
+
+**NOTE**: in this particular case it was choosen to authorize a single IP address.
+
+### Create a PEM key to access an EC2 instance
+
+~~~
+aws ec2 create-key-pair --key-name my-ec2-key --query 'KeyMaterial' --output text > ~/my-ec2-key.pem
+chmod 400 ~/my-ec2-key.pem
+~~~
+
+Reference: https://docs.aws.amazon.com/cli/latest/userguide/tutorial-ec2-ubuntu.html
 
 ### List the available AMI images for Amazon Linux
 
