@@ -188,6 +188,11 @@ link directly in the "Description" of the instance.
 aws ec2 describe-instance-status --instance-ids i-XXXXXXXXXXXXXXXXXX --output=table
 ~~~
 
+## CentOS / Debian AWS instances
+
+* Official CentOS images on Amazon's EC2 Cloud [https://wiki.centos.org/Cloud/AWS]
+* Official Debian Amazon Machine Images [https://wiki.debian.org/Cloud/AmazonEC2Image/]
+
 ## AWS Cli enhancements/replacements
 
 * https://github.com/donnemartin/saws
