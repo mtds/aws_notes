@@ -192,7 +192,8 @@ aws ec2 describe-instance-status --instance-ids i-XXXXXXXXXXXXXXXXXX --output=ta
 
 * Official CentOS images on Amazon's EC2 Cloud [https://wiki.centos.org/Cloud/AWS]
 * Official Debian Amazon Machine Images [https://wiki.debian.org/Cloud/AmazonEC2Image/]
-
+* Using FAI to Customize and Build Your Own Cloud Images: [https://noah.meyerhans.us/blog/2017/02/10/using-fai-to-customize-and-build-your-own-cloud-images/]
+*
 ## AWS Cli enhancements/replacements
 
 * https://github.com/donnemartin/saws
@@ -204,3 +205,7 @@ aws ec2 describe-instance-status --instance-ids i-XXXXXXXXXXXXXXXXXX --output=ta
 * Source code repository: https://github.com/aws/aws-cli
 * Aliases for AWS cli: https://github.com/awslabs/awscli-aliases
 
+## Tutorials
+
+* How to handle AWS through the command cine: https://www.packtpub.com/books/content/how-to-handle-aws-through-the-command-line
+* Automating AWS With Python and Boto3: https://linuxacademy.com/howtoguides/posts/show/topic/14209-automating-aws-with-python-and-boto3
