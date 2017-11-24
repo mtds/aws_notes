@@ -190,9 +190,9 @@ aws ec2 describe-instance-status --instance-ids i-XXXXXXXXXXXXXXXXXX --output=ta
 
 ## CentOS / Debian AWS instances
 
-* (Official CentOS images on Amazon's EC2 Cloud)[https://wiki.centos.org/Cloud/AWS]
-* (Official Debian Amazon Machine Images)[https://wiki.debian.org/Cloud/AmazonEC2Image/]
-* (Using FAI to Customize and Build Your Own Cloud Images)[https://noah.meyerhans.us/blog/2017/02/10/using-fai-to-customize-and-build-your-own-cloud-images/]
+* [Official CentOS images on Amazon's EC2 Cloud](https://wiki.centos.org/Cloud/AWS)
+* [Official Debian Amazon Machine Images](https://wiki.debian.org/Cloud/AmazonEC2Image/)
+* [Using FAI to Customize and Build Your Own Cloud Images](https://noah.meyerhans.us/blog/2017/02/10/using-fai-to-customize-and-build-your-own-cloud-images/)
 
 ## AWS Cli enhancements/replacements
 
@@ -207,5 +207,5 @@ aws ec2 describe-instance-status --instance-ids i-XXXXXXXXXXXXXXXXXX --output=ta
 
 ## Tutorials
 
-* (How to handle AWS through the command line)[https://www.packtpub.com/books/content/how-to-handle-aws-through-the-command-line]
-* (Automating AWS With Python and Boto3)[https://linuxacademy.com/howtoguides/posts/show/topic/14209-automating-aws-with-python-and-boto3]
+* [How to handle AWS through the command line](https://www.packtpub.com/books/content/how-to-handle-aws-through-the-command-line)
+* [Automating AWS With Python and Boto3](https://linuxacademy.com/howtoguides/posts/show/topic/14209-automating-aws-with-python-and-boto3)
