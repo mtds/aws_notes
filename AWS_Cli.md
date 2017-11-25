@@ -209,3 +209,7 @@ aws ec2 describe-instance-status --instance-ids i-XXXXXXXXXXXXXXXXXX --output=ta
 
 * [How to handle AWS through the command line](https://www.packtpub.com/books/content/how-to-handle-aws-through-the-command-line)
 * [Automating AWS With Python and Boto3](https://linuxacademy.com/howtoguides/posts/show/topic/14209-automating-aws-with-python-and-boto3)
+
+## AWS Costs Calculator
+
+* [AWS Instance price guide (not affiliated with Amazon)](https://instaguide.io)
